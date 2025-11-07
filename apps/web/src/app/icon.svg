@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">AI Playground Logo</title>
+  <desc id="desc">Rounded gradient tile with stylized AI letters</desc>
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="50%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="#020617" />
+  <rect x="64" y="64" width="384" height="384" rx="96" fill="url(#glow)" opacity="0.85" />
+  <path
+    d="M170 344h-28l64-176h28l64 176h-28l-16-48h-72zm40-120-27 80h54zM318 168h88c25 0 42 15 42 38 0 19-11 32-28 36 21 3 36 19 36 41 0 27-20 45-50 45h-88zm80 64c12 0 20-7 20-17 0-11-8-17-20-17h-52v34zm6 84c14 0 24-8 24-20 0-12-10-20-24-20h-58v40z"
+    fill="#f8fafc"
+  />
+</svg>
+
