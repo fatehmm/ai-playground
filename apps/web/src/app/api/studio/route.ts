@@ -3,6 +3,7 @@ import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { createOpenAI } from "@ai-sdk/openai";
 import { createXai } from "@ai-sdk/xai";
 import { generateText } from "ai";
+import type { LanguageModel } from "ai";
 import { NextResponse } from "next/server";
 
 import {
@@ -30,8 +31,7 @@ interface StudioResponseItem {
 	};
 }
 
-type LanguageProvider = ReturnType<typeof createOpenAI>;
-type LanguageProviderFactory = (apiKey: string) => LanguageProvider;
+type LanguageProviderFactory = (apiKey: string) => (modelId: string) => unknown;
 
 const providerFactories: Record<ProviderId, LanguageProviderFactory> = {
 	openai: (apiKey: string) => createOpenAI({ apiKey }),
@@ -126,8 +126,9 @@ export async function POST(request: Request) {
 
 				try {
 					const provider = factory(providerKey.trim());
+					const model = provider(selection.modelId) as LanguageModel;
 					const result = await generateText({
-						model: provider(selection.modelId),
+						model,
 						system: systemPrompt,
 						prompt: userPrompt,
 					});
