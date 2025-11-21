@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
+import Footer from '@/components/footer';
 import { StudioCard } from '@/components/studio-card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
 
 const features = [
   {
@@ -84,13 +84,7 @@ export default function Home() {
         <p>This project is open source and free to use. You can find the source code on GitHub.</p>
       </section>
 
-      <footer className='mt-10 px-6'>
-        <Separator />
-        <div className='mx-auto flex max-w-5xl flex-col gap-2 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between'>
-          <span>© 2025 ai playground.</span>
-          <span>crafted with bun + next.js.</span>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

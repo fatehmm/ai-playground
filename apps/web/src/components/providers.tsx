@@ -6,6 +6,7 @@ import { ApiKeysProvider } from "./api-keys-provider";
 import { queryClient } from "@/utils/trpc";
 import { ThemeProvider } from "./theme-provider";
 import { Toaster } from "./ui/sonner";
+import { CookieConsentBanner } from "./cookie-consent-banner";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
 	return (
@@ -22,6 +23,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 				</QueryClientProvider>
 			</ApiKeysProvider>
 			<Toaster richColors />
+			<CookieConsentBanner />
 		</ThemeProvider>
 	);
 }
