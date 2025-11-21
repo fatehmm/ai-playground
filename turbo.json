@@ -6,7 +6,8 @@
     "CORS_ORIGIN",
     "BETTER_AUTH_SECRET",
     "BETTER_AUTH_URL",
-    "NEXT_PUBLIC_BETTER_AUTH_URL"
+    "NEXT_PUBLIC_BETTER_AUTH_URL",
+    "RESEND_API_KEY"
   ],
   "tasks": {
     "build": {
