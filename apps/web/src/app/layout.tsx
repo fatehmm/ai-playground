@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 		locale: "en_US",
 		images: [
 			{
-				url: "/opengraph-image.png",
+				url: "/image.png",
 				width: 1200,
 				height: 630,
 				alt: "AI Playground Studio preview showing multi-provider responses",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 		title: "AI Playground Studio · Multi-Provider Prompt Sandbox",
 		description:
 			"Run one prompt across OpenAI, Anthropic, xAI, and Gemini. Download configs, compare reasoning, and share results.",
-		images: ["/twitter-image.png"],
+		images: ["/image.png"],
 	},
 	alternates: {
 		canonical: "/",
